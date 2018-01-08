@@ -101,27 +101,37 @@ public class MainFragment extends Fragment implements View.OnClickListener {
         choosePowBtn.setEnabled(true);
         choosePowBtn.getBackground().setAlpha(255);
 
-//        Capturing the button clicked in to a variable
+//        Capturing the button clicked into a variable
         Button btn = (Button)v;
         int leftDrawable = 0;
-        int rightDrawable = 0;
+        int rightDrawable = R.drawable.item_selected;
 
         if(btn == AccBtn){
             leftDrawable = R.drawable.lightning;
-            rightDrawable = R.drawable.item_selected;
         } else if (btn == geneticBtn){
             leftDrawable = R.drawable.atomic;
         } else if (btn == bornBtn) {
             leftDrawable = R.drawable.rocket;
         }
-//      Setting the check_mark on each button once selected (they are all disabled by default)
-        btn.setCompoundDrawablesWithIntrinsicBounds(leftDrawable,0,R.drawable.item_selected,0);
+//      Setting/removing the check_mark on each button once selected (they are all disabled by default)
+        if(btn == AccBtn){
+            btn.setCompoundDrawablesWithIntrinsicBounds(leftDrawable,0,R.drawable.item_selected,0);
+            bornBtn.setCompoundDrawablesWithIntrinsicBounds(R.drawable.rocket,0,0,0);
+            geneticBtn.setCompoundDrawablesWithIntrinsicBounds(R.drawable.atomic,0,0,0);
+        } else if(btn == geneticBtn){
+            AccBtn.setCompoundDrawablesWithIntrinsicBounds(R.drawable.lightning,0,0,0);
+            btn.setCompoundDrawablesWithIntrinsicBounds(leftDrawable,0,R.drawable.item_selected,0);
+            bornBtn.setCompoundDrawablesWithIntrinsicBounds(R.drawable.rocket,0,0,0);
+        } else if (btn == bornBtn){
+            geneticBtn.setCompoundDrawablesWithIntrinsicBounds(R.drawable.atomic,0,0,0);
+            btn.setCompoundDrawablesWithIntrinsicBounds(leftDrawable,0,R.drawable.item_selected,0);
+        }
+
 
     }
 
-    public void removeChecks(){
 
-    }
+
 
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
