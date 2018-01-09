@@ -8,9 +8,10 @@ import android.os.Bundle;
 
 
 import com.smartdroidesign.heroes.Fragments.MainFragment;
+import com.smartdroidesign.heroes.Fragments.PickPowerFragment;
 import com.smartdroidesign.heroes.R;
 
-public class MainActivity extends AppCompatActivity implements MainFragment.MainFragmentInteractionListener {
+public class MainActivity extends AppCompatActivity implements MainFragment.MainFragmentInteractionListener, PickPowerFragment.PickPowerInteractionListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,10 +31,27 @@ public class MainActivity extends AppCompatActivity implements MainFragment.Main
             manager.beginTransaction().add(R.id.fragment_container, fragment).commit();
         }
     }
+//  REPLACING the PickPower fragment via a method
+    public void loadPickPowerScreen(){
+        PickPowerFragment pickPowerFragment = new PickPowerFragment();
+//      REPLACING: the fragment is swapped with another one i.e MainFragment swapped for PickPowerFragment
+        this.getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, pickPowerFragment).addToBackStack(null).commit();
+
+
+//       ADDING: the fragment is added on top of the current one i.e. PickPowerFragment added on top of the MainFragment one.
+        //getSupportFragmentManager().beginTransaction().add(R.id.fragment_container, pickPowerFragment).commit();
+
+    }
+
 //  This is the method tha has to be implemented in any activity that wants to call a fragment. Refer to MainFragment.java
 //   MainFragmentInteractionListener(); it's the interface, onMainFragmentInteraction(); is the method called inside the interface, and here.
     @Override
     public void onMainFragmentInteraction(Uri uri) {
+
+    }
+
+    @Override
+    public void PickPowerInteraction(Uri uri) {
 
     }
 }

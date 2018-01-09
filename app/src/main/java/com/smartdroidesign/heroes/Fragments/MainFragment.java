@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.smartdroidesign.heroes.Activities.MainActivity;
 import com.smartdroidesign.heroes.R;
 
 /**
@@ -85,6 +86,14 @@ public class MainFragment extends Fragment implements View.OnClickListener {
         AccBtn.setOnClickListener(this);
         geneticBtn.setOnClickListener(this);
         bornBtn.setOnClickListener(this);
+
+        choosePowBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MainActivity mainActivity = (MainActivity)getActivity();
+                mainActivity.loadPickPowerScreen();
+            }
+        });
 
 
 //      We want to disable the Choose Powers button as the screen loads for the first time, and until any checkbox is checked.
