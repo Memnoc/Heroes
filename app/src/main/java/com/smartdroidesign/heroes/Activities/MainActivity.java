@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity implements MainFragment.Main
     public String SECONDARY_POWER;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

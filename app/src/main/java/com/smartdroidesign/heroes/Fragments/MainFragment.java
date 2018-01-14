@@ -1,6 +1,10 @@
 package com.smartdroidesign.heroes.Fragments;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -76,6 +80,11 @@ public class MainFragment extends Fragment implements View.OnClickListener {
 
         choosePowBtn.setEnabled(false);
         choosePowBtn.getBackground().setAlpha(128);
+
+
+        MainActivity mainActivity = (MainActivity)getActivity();
+
+
         return view;
     }
     @Override
