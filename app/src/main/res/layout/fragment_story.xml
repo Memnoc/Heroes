@@ -9,7 +9,7 @@
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolBar"
-        android:layout_width="360dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="#233749"
         android:minHeight="?attr/actionBarSize"
@@ -32,10 +32,10 @@
 
     <TextView
         android:id="@+id/heroLabel"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:text="HERO NAME"
         android:textAlignment="center"
@@ -43,34 +43,37 @@
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/storyHeroLogo"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolBar" />
 
     <TextView
         android:id="@+id/backStoryText"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginStart="16dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:text="BACKSTORY"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/heroLabel" />
 
     <TextView
         android:id="@+id/storyBio"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:gravity="start"
         android:padding="8dp"
         android:paddingBottom="8dp"
         android:paddingLeft="8dp"
         android:paddingRight="8dp"
-        android:text="Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est."
         android:textAlignment="viewStart"
         android:textStyle="italic"
         app:layout_constraintBottom_toTopOf="@+id/primPowerBtn"
@@ -82,34 +85,34 @@
 
     <ImageView
         android:id="@+id/storyHeroLogo"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
         android:src="@drawable/big_superman_logo"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolBar"
-        android:layout_marginLeft="16dp" />
+        app:layout_constraintTop_toBottomOf="@+id/toolBar" />
 
     <TextView
         android:id="@+id/primPowerText"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginStart="32dp"
         android:text="PRIMARY POWER"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/primPowerBtn"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="32dp" />
 
     <Button
         android:id="@+id/primPowerBtn"
-        android:layout_width="296dp"
+        android:layout_width="0dp"
         android:layout_height="48dp"
-        android:layout_marginBottom="32dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginBottom="48dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
         android:background="@drawable/hero_button"
         android:drawableLeft="@drawable/laser_vision"
         android:drawableRight="@drawable/item_selected_empty"
@@ -119,29 +122,30 @@
         android:textColor="#FAC740"
         app:layout_constraintBottom_toTopOf="@+id/secondPowerBtn"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/secondPowerText"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
+        android:layout_marginStart="32dp"
         android:text="SECONDARY POWER"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/secondPowerBtn"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/primPowerBtn" />
+        app:layout_constraintTop_toBottomOf="@+id/primPowerBtn"
+        android:layout_marginLeft="32dp" />
 
 
     <Button
         android:id="@+id/secondPowerBtn"
-        android:layout_width="296dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
         android:background="@drawable/hero_button"
         android:drawableLeft="@drawable/super_strength"
         android:drawableRight="@drawable/item_selected_empty"
@@ -151,15 +155,16 @@
         android:textColor="#FAC740"
         app:layout_constraintBottom_toTopOf="@+id/startOverBtn"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/startOverBtn"
-        android:layout_width="296dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
         android:background="@drawable/hero_button"
         android:backgroundTint="#FAC740"
         android:paddingLeft="10dp"

@@ -22,7 +22,7 @@ import com.smartdroidesign.heroes.R;
  * Use the {@link StoryFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class StoryFragment extends Fragment {
+public class StoryFragment extends Fragment implements View.OnClickListener {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -79,10 +79,17 @@ public class StoryFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_story, container, false);
-        MainActivity mainActivity = (MainActivity)getActivity();
+        final MainActivity mainActivity = (MainActivity)getActivity();
 
         String heroName = mainActivity.HERO_NAME;
+        String heroBio = mainActivity.HERO_BIO;
+        int logo = mainActivity.HERO_LOGO;
+        int primIcon = mainActivity.PRIM_ICON;
+        int secIcon = mainActivity.SECON_ICON;
+        String primary = mainActivity.PRIMARY_POWER;
+        String secondary = mainActivity.SECONDARY_POWER;
 
+        storyHeroLogo = (ImageView)view.findViewById(R.id.storyHeroLogo);
         heroLabel = (TextView)view.findViewById(R.id.heroLabel);
         backStoryText = (TextView)view.findViewById(R.id.backStoryText);
         storyBio = (TextView)view.findViewById(R.id.storyBio);
@@ -90,9 +97,25 @@ public class StoryFragment extends Fragment {
         primPowerBtn = (Button) view.findViewById(R.id.primPowerBtn);
         secondPowerText = (TextView)view.findViewById(R.id.secondPowerText);
         secondPowerBtn = (Button) view.findViewById(R.id.secondPowerBtn);
-        backStoryText = (Button)view.findViewById(R.id.startOverBtn);
+        backStoryText = (TextView) view.findViewById(R.id.backStoryText);
+        startOverBtn = (Button) view.findViewById(R.id.startOverBtn);
+        startOverBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mainActivity.loadMainScreen();
+            }
+        });
+
+
 
         heroLabel.setText(heroName);
+        storyBio.setText(heroBio);
+        storyHeroLogo.setImageResource(logo);
+        primPowerBtn.setCompoundDrawablesWithIntrinsicBounds(primIcon,0,0,0);
+        primPowerBtn.setText(primary);
+        secondPowerBtn.setText(secondary);
+        secondPowerBtn.setCompoundDrawablesWithIntrinsicBounds(secIcon,0,0,0);
+
 
 
         return view;
@@ -121,6 +144,12 @@ public class StoryFragment extends Fragment {
         super.onDetach();
         mListener = null;
     }
+
+    @Override
+    public void onClick(View v) {
+
+    }
+
 
     /**
      * This interface must be implemented by activities that contain this

@@ -120,25 +120,72 @@ public class PickPowerFragment extends Fragment implements View.OnClickListener 
 
         Button btn = (Button)v;
         MainActivity mainActivity = (MainActivity)getActivity();
+        String turtleBio = getResources().getString(R.string.turtle_bio_src);
+        String thorBio = getResources().getString(R.string.thor_bio_src);
+        String supermanBio = getResources().getString(R.string.superman_bio_src);
+        String spidermanBio = getResources().getString(R.string.spiderman_bio_src);
+        String cyclopeBio = getResources().getString(R.string.cyclope_bio_src);
+        String wolverineBio = getResources().getString(R.string.wolverine_bio_src);
+
 
         if(btn == turtleBtn){
             leftDrawable = R.drawable.turtle_power;
-            mainActivity.HERO_NAME = "Donatello";
+            mainActivity.HERO_NAME = "Ninja Turtles";
+            mainActivity.HERO_BIO = turtleBio;
+            mainActivity.HERO_LOGO = R.drawable.turtle_power;
+            mainActivity.PRIMARY_POWER = "Turtle Power";
+            mainActivity.PRIM_ICON = R.drawable.turtle_power;
+            mainActivity.SECON_ICON = R.drawable.super_strength;
+            mainActivity.SECONDARY_POWER = "Super Strength";
         } else if (btn == lightBtn){
             leftDrawable = R.drawable.thors_hammer;
+            mainActivity.HERO_NAME = "Thor";
+            mainActivity.HERO_BIO = thorBio;
+            mainActivity.HERO_LOGO = R.drawable.thors_hammer;
+            mainActivity.PRIMARY_POWER = "Big Hammer";
+            mainActivity.SECONDARY_POWER = "Super Strength";
+            mainActivity.PRIM_ICON = R.drawable.thors_hammer;
+            mainActivity.SECON_ICON = R.drawable.super_strength;
         } else if (btn == flightBtn) {
             leftDrawable = R.drawable.super_man_crest;
+            mainActivity.HERO_NAME = "Superman";
+            mainActivity.HERO_BIO = supermanBio;
+            mainActivity.HERO_LOGO = R.drawable.super_man_crest;
+            mainActivity.PRIMARY_POWER = "Flight";
+            mainActivity.SECONDARY_POWER = "Super Strength";
+            mainActivity.PRIM_ICON = R.drawable.super_man_crest;
+            mainActivity.SECON_ICON = R.drawable.super_strength;
         } else if (btn == webBtn) {
             leftDrawable = R.drawable.spider_web;
+            mainActivity.HERO_LOGO = R.drawable.spider_web;
+            mainActivity.HERO_NAME = "Spiderman";
+            mainActivity.HERO_BIO = spidermanBio;
+            mainActivity.PRIMARY_POWER = "Web slinging";
+            mainActivity.SECONDARY_POWER = "Super agility";
+            mainActivity.PRIM_ICON = R.drawable.spider_web;
+            mainActivity.SECON_ICON = R.drawable.super_strength;
         } else if (btn == laserBtn) {
             leftDrawable = R.drawable.laser_vision;
+            mainActivity.HERO_LOGO = R.drawable.laser_vision;
+            mainActivity.HERO_NAME = "Cyclope";
+            mainActivity.HERO_BIO = cyclopeBio;
+            mainActivity.PRIMARY_POWER = "Laser vision";
+            mainActivity.SECONDARY_POWER = "Super Smart";
+            mainActivity.PRIM_ICON = R.drawable.laser_vision;
+            mainActivity.SECON_ICON = R.drawable.super_strength;
         } else if (btn == strenghtBtn){
             leftDrawable = R.drawable.super_strength;
+            mainActivity.HERO_LOGO = R.drawable.super_strength;
+            mainActivity.HERO_NAME = "Wolverine";
+            mainActivity.HERO_BIO = wolverineBio;
+            mainActivity.PRIMARY_POWER = "Adamantium skeleton";
+            mainActivity.SECONDARY_POWER = "Super Strength";
+            mainActivity.PRIM_ICON = R.drawable.super_strength;
+            mainActivity.SECON_ICON = R.drawable.super_strength;
         }
         btn.setCompoundDrawablesWithIntrinsicBounds(leftDrawable,0,R.drawable.item_selected,0);
 
     }
-
 
 
     // TODO: Rename method, update argument and hook method into UI event

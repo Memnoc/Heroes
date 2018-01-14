@@ -14,7 +14,14 @@ import com.smartdroidesign.heroes.R;
 
 public class MainActivity extends AppCompatActivity implements MainFragment.MainFragmentInteractionListener, PickPowerFragment.PickPowerInteractionListener, StoryFragment.StoryFragmentInteractionListener {
 
-    public String HERO_NAME = "";
+    public String HERO_NAME;
+    public String HERO_BIO;
+    public int HERO_LOGO;
+    public int PRIM_ICON;
+    public int SECON_ICON;
+    public String PRIMARY_POWER;
+    public String SECONDARY_POWER;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,5 +65,11 @@ public class MainActivity extends AppCompatActivity implements MainFragment.Main
     public void StoryFragmentInteraction(Uri uri) {
 
     }
+
+    public void loadMainScreen() {
+        MainFragment mainFragment = new MainFragment();
+        this.getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, mainFragment).addToBackStack(null).commit();
+    }
+
 }
 
