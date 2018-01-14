@@ -228,4 +228,6 @@ public class PickPowerFragment extends Fragment implements View.OnClickListener 
         // TODO: Update argument type and name
         void PickPowerInteraction(Uri uri);
     }
+
+
 }

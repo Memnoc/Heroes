@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity implements MainFragment.Main
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         FragmentManager manager = getSupportFragmentManager();
         Fragment fragment = manager.findFragmentById(R.id.fragment_container);
 
