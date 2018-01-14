@@ -3,9 +3,191 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.smartdroidesign.heroes.Fragments.PickPowerFragment">
+    android:background="@drawable/hero_bg_gradient"
+    tools:context="com.smartdroidesign.heroes.Fragments.PickPowerFragment"
+    tools:layout_editor_absoluteY="25dp">
 
-    <!-- TODO: Update blank fragment layout -->
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#233749"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:contentInsetEnd="0dp"
+        app:contentInsetStart="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/heroLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:adjustViewBounds="true"
+            android:src="@drawable/top_banner_bar" />
+
+
+    </android.support.v7.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/heroLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FAC740"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:text="PICK A POWER"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/turtleBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolBar" />
+
+    <Button
+        android:id="@+id/turtleBtn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/hero_button"
+        android:drawableLeft="@drawable/turtle_power"
+        android:drawableRight="@drawable/item_selected_empty"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="Turtle Power"
+        android:textColor="#FAC740"
+        app:layout_constraintBottom_toTopOf="@+id/lightBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/heroLabel" />
+
+    <Button
+        android:id="@+id/lightBtn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/hero_button"
+        android:drawableLeft="@drawable/thors_hammer"
+        android:drawableRight="@drawable/item_selected_empty"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="Lightning"
+        android:textColor="#FAC740"
+        app:layout_constraintBottom_toTopOf="@+id/flightBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/turtleBtn" />
+
+    <Button
+        android:id="@+id/flightBtn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/hero_button"
+        android:drawableLeft="@drawable/super_man_crest"
+        android:drawableRight="@drawable/item_selected_empty"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="Flight"
+        android:textColor="#FAC740"
+        app:layout_constraintBottom_toTopOf="@+id/webButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lightBtn" />
+
+    <Button
+        android:id="@+id/webButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/hero_button"
+        android:drawableLeft="@drawable/spider_web"
+        android:drawableRight="@drawable/item_selected_empty"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="Web"
+        android:textColor="#FAC740"
+        app:layout_constraintBottom_toTopOf="@+id/primPowerBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/flightBtn" />
+
+    <Button
+        android:id="@+id/primPowerBtn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/hero_button"
+        android:drawableLeft="@drawable/laser_vision"
+        android:drawableRight="@drawable/item_selected_empty"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="Laser Vision"
+        android:textColor="#FAC740"
+        app:layout_constraintBottom_toTopOf="@+id/secondPowerBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/webButton" />
+
+    <Button
+        android:id="@+id/secondPowerBtn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/hero_button"
+        android:drawableLeft="@drawable/super_strength"
+        android:drawableRight="@drawable/item_selected_empty"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="Super Strenght"
+        android:textColor="#FAC740"
+        app:layout_constraintBottom_toTopOf="@+id/showStoryBtn"
+        app:layout_constraintDimensionRatio=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/primPowerBtn" />
+
+    <Button
+        android:id="@+id/showStoryBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/hero_button"
+        android:backgroundTint="#FAC740"
+        android:paddingLeft="10dp"
+        android:paddingRight="5dp"
+        android:text="SHOW BACKSTORY"
+        android:textColor="#414141"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/secondPowerBtn" />
 
 
 </android.support.constraint.ConstraintLayout>

@@ -53,6 +53,7 @@
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="32dp"
         android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/hero_button"
         android:drawableLeft="@drawable/atomic"
         android:drawableRight="@drawable/item_selected_empty"
@@ -73,6 +74,7 @@
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="32dp"
         android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/hero_button"
         android:drawableLeft="@drawable/rocket"
         android:drawableRight="@drawable/item_selected_empty"
@@ -80,7 +82,7 @@
         android:paddingRight="10dp"
         android:text="BORN WITH THEM"
         android:textColor="#FAC740"
-        app:layout_constraintBottom_toTopOf="@+id/choosePowBtn"
+        app:layout_constraintBottom_toTopOf="@+id/showStoryBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -108,12 +110,13 @@
         app:layout_constraintTop_toBottomOf="@+id/heroView" />
 
     <Button
-        android:id="@+id/choosePowBtn"
+        android:id="@+id/showStoryBtn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="32dp"
         android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/hero_button"
         android:backgroundTint="#FAC740"
         android:paddingLeft="10dp"
@@ -121,6 +124,8 @@
         android:text="CHOOSE POWERS"
         android:textColor="#414141"
         android:textSize="18dp"
+        android:textStyle="bold"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"

@@ -21,17 +21,10 @@ import com.smartdroidesign.heroes.R;
  * create an instance of this fragment.
  */
 public class MainFragment extends Fragment implements View.OnClickListener {
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-
-//    Declaring variables in the global scope.
-
     private Button AccBtn;
     private Button geneticBtn;
     private Button bornBtn;
@@ -40,18 +33,8 @@ public class MainFragment extends Fragment implements View.OnClickListener {
     private MainFragmentInteractionListener mListener;
 
     public MainFragment() {
-        // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment MainFragment.
-     */
-    // TODO: Rename and change types and number of parameters
     public static MainFragment newInstance(String param1, String param2) {
         MainFragment fragment = new MainFragment();
         Bundle args = new Bundle();
@@ -73,20 +56,15 @@ public class MainFragment extends Fragment implements View.OnClickListener {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-// This is a necessary passage, the view has to be saved into a variable, in order to be able to retrieve
-// the other elements (buttons, etc.) by id. So, put the view into a variable "view".
         View view = inflater.inflate(R.layout.fragment_main, container, false);
-//        Now you can register the views as always.
         AccBtn = (Button)view.findViewById(R.id.AccBtn);
         geneticBtn = (Button)view.findViewById(R.id.geneticBtn);
         bornBtn = (Button)view.findViewById(R.id.bornBtn);
-        choosePowBtn = (Button)view.findViewById(R.id.choosePowBtn);
+        choosePowBtn = (Button)view.findViewById(R.id.showStoryBtn);
 
-// The word "this" refers to "this class" and finds anything matching an onClickListener in the MainFragment.class.
         AccBtn.setOnClickListener(this);
         geneticBtn.setOnClickListener(this);
         bornBtn.setOnClickListener(this);
-
         choosePowBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -96,24 +74,17 @@ public class MainFragment extends Fragment implements View.OnClickListener {
         });
 
 
-//      We want to disable the Choose Powers button as the screen loads for the first time, and until any checkbox is checked.
         choosePowBtn.setEnabled(false);
         choosePowBtn.getBackground().setAlpha(128);
-        // Inflate the layout for this fragment
         return view;
     }
-// To be able to use onClick(); an interface needed to be implemented in this class MainFragment.class
-// implements View.OnClickListener allows us to use onClick as a generic function
-// and set up listeners in the buttons
     @Override
     public void onClick(View v) {
         choosePowBtn.setEnabled(true);
         choosePowBtn.getBackground().setAlpha(255);
 
-//        Capturing the button clicked into a variable
         Button btn = (Button)v;
         int leftDrawable = 0;
-//      Resetting the buttons checks to empty images to keep the text in place, and deleting the checks for each buttons that is unclicked
         AccBtn.setCompoundDrawablesWithIntrinsicBounds(R.drawable.lightning,0,R.drawable.item_selected_empty,0);
         geneticBtn.setCompoundDrawablesWithIntrinsicBounds(R.drawable.atomic,0,R.drawable.item_selected_empty,0);
         bornBtn.setCompoundDrawablesWithIntrinsicBounds(R.drawable.rocket,0,R.drawable.item_selected_empty,0);
@@ -125,16 +96,11 @@ public class MainFragment extends Fragment implements View.OnClickListener {
         } else if (btn == bornBtn) {
             leftDrawable = R.drawable.rocket;
         }
-//      Setting/removing the check_mark on each button once selected (they are all disabled by default)
         btn.setCompoundDrawablesWithIntrinsicBounds(leftDrawable,0,R.drawable.item_selected,0);
 
 
     }
 
-
-
-
-    // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
         if (mListener != null) {
             mListener.onMainFragmentInteraction(uri);
