@@ -52,10 +52,10 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:text="BACKSTORY"
         android:textAlignment="center"
-        android:textSize="18sp"
+        android:textSize="14sp"
         android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -64,7 +64,7 @@
     <TextView
         android:id="@+id/storyBio"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="125dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
@@ -76,12 +76,10 @@
         android:paddingRight="8dp"
         android:textAlignment="viewStart"
         android:textStyle="italic"
-        app:layout_constraintBottom_toTopOf="@+id/primPowerBtn"
+        app:layout_constraintBottom_toTopOf="@+id/primPowerText"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/backStoryText"
-        app:layout_constraintVertical_bias="0.085" />
+        app:layout_constraintTop_toBottomOf="@+id/backStoryText" />
 
     <ImageView
         android:id="@+id/storyHeroLogo"
@@ -98,12 +96,15 @@
         android:id="@+id/primPowerText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginStart="32dp"
         android:text="PRIMARY POWER"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/primPowerBtn"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginRight="8dp"
         android:layout_marginLeft="32dp" />
 
     <Button
@@ -130,12 +131,16 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
         android:text="SECONDARY POWER"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/secondPowerBtn"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/primPowerBtn"
+        android:layout_marginRight="8dp"
         android:layout_marginLeft="32dp" />
 
 
