@@ -7,7 +7,7 @@
     android:id="@+id/fragment_container"
     tools:context="com.smartdroidesign.heroes.Activities.MainActivity">
 
-    <com.smartdroidesign.heroes.CustomView
+    <com.smartdroidesign.heroes.Views.CustomView
         android:layout_width="match_parent"
         android:layout_height="460dp"
         android:layout_marginBottom="8dp"

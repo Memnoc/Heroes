@@ -3,9 +3,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#1b2b3b"
     tools:context="com.smartdroidesign.heroes.Fragments.StoryFragment"
-    android:background="@drawable/hero_bg_gradient"
     tools:layout_editor_absoluteY="25dp">
+
+    <com.smartdroidesign.heroes.Views.CustomView_second
+        android:layout_width="match_parent"
+        android:layout_height="460dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolBar"
@@ -36,11 +49,11 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="4dp"
         android:text="HERO NAME"
         android:textAlignment="center"
         android:textColor="#FAC740"
-        android:textSize="24sp"
+        android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -52,7 +65,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:text="BACKSTORY"
         android:textAlignment="center"
         android:textSize="14sp"
@@ -66,8 +79,8 @@
         android:layout_width="0dp"
         android:layout_height="125dp"
         android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
         android:gravity="start"
         android:padding="8dp"
@@ -86,17 +99,17 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="40dp"
         android:src="@drawable/big_superman_logo"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolBar" />
+        app:layout_constraintTop_toBottomOf="@+id/toolBar"
+        android:layout_marginLeft="16dp" />
 
     <TextView
         android:id="@+id/primPowerText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="6dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="32dp"
         android:text="PRIMARY POWER"
@@ -132,6 +145,8 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="8dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
         android:text="SECONDARY POWER"
@@ -139,9 +154,7 @@
         app:layout_constraintBottom_toTopOf="@+id/secondPowerBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/primPowerBtn"
-        android:layout_marginRight="8dp"
-        android:layout_marginLeft="32dp" />
+        app:layout_constraintTop_toBottomOf="@+id/primPowerBtn" />
 
 
     <Button

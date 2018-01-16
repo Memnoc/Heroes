@@ -3,12 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/hero_bg_gradient"
+    android:background="#1b2b3b"
     tools:context="com.smartdroidesign.heroes.Fragments.MainFragment">
 
     <!-- TODO: Update blank fragment layout -->
 
-    <com.smartdroidesign.heroes.CustomView
+    <com.smartdroidesign.heroes.Views.CustomView
         android:layout_width="match_parent"
         android:layout_height="460dp"
         android:layout_marginBottom="8dp"
