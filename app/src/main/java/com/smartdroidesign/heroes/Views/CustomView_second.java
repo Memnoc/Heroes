@@ -57,9 +57,8 @@ public class CustomView_second extends View {
 
     }
 
-    // CURRENTLY DISABLED AS THIS NEEDS TWEAKING
 
-    /*@Override
+    @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
 
@@ -86,5 +85,5 @@ public class CustomView_second extends View {
         mRectSquare.bottom =  mRectSquare.top + 20;
         canvas.drawRoundRect( mRectSquare,20,20,mPaintSquare);
 
-    }*/
+    }
 }
